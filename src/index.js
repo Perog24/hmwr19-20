@@ -4,6 +4,8 @@ import {createBrowserRouter, RouterProvider} from "react-router-dom";
 
 import Root from "./routes/root";
 import Users from "./components/Users";
+import Posts from "./components/Posts";
+import Comments from "./components/Comments";
 import ErrorPage from "./error-page";
 
 import './index.css';
@@ -15,6 +17,14 @@ const router = createBrowserRouter([
     {
       path:'/users',
       Component: Users
+    },
+    {
+      path:'/posts',
+      Component: Posts
+    },
+    {
+      path:'/comments',
+     Component: Comments
     }
    ],
    errorElement: <ErrorPage />},

@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { navLinks } from "../constants";
 
 import { Container, Nav, Navbar } from "react-bootstrap";
@@ -6,30 +7,33 @@ import { Container, Nav, Navbar } from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Header() {
-   const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(null);
+  const location = useLocation();
 
-   useEffect(() => {
-      const storedActiveIndex = localStorage.getItem("activeIndex");
-      if (storedActiveIndex) {
-        setActiveIndex(parseInt(storedActiveIndex));
-      }
-    }, []);
+  useEffect(() => {
+    const path = location.pathname;
+    const activeLink = navLinks.find((link) => link.linkTo === path);
+    const index =  navLinks.indexOf(activeLink);
+    setActiveIndex(index);
+  }, [location]);
 
-   const setActive = (index) => {
-     setActiveIndex(index);
-     localStorage.setItem("activeIndex", index.toString());
-   };
-   return (
-      <header >   
-         <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-               <Nav className="me-auto">           
-               {navLinks.map((link, index)=>(<Nav.Link key={index} href={link.linkTo}  onClick={() => setActive(index)}
+  return (
+    <header>
+      <Navbar bg="dark" data-bs-theme="dark">
+        <Container>
+          <Nav className="me-auto">
+            {navLinks.map((link, index) => (
+              <Nav.Link
+                key={index}
+                href={link.linkTo}
                 className={activeIndex === index ? "active" : ""}
-              >{link.name}</Nav.Link>))}
-               </Nav>
-            </Container>
-         </Navbar>
-      </header>
-   )
+              >
+                {link.name}
+              </Nav.Link>
+            ))}
+          </Nav>
+        </Container>
+      </Navbar>
+    </header>
+  );
 }
