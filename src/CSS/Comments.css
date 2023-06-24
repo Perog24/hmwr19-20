@@ -1,16 +1,16 @@
 .commentWrapper{
    height: calc(100vh - 112px);
-   min-height:80px;
-   overflow: auto;
-   text-align: center;
+   min-height:80px;   
+   overflow: auto!important;
    padding: 10px 5px;
+}
+.commentWrapper h3{
+  text-align: center;
 }
 .comments{
    margin: 10px auto;
    padding: 5px;
    width: 96%;   
-   border: transparent;
-   border-radius: 20px;
 }
 .comments *{
    margin: 0;
@@ -22,10 +22,7 @@
    border-top: 2px solid rgb(0, 0, 0); 
    border-radius: 10px;  
 }
-.commentWrapper h1{
-  text-align: center;
-}
-.comments h4{
+.comments h5{
    cursor: pointer;
    &:hover{
       color:#3b7d9c!important;
