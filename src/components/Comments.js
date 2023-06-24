@@ -38,9 +38,9 @@ export default function Comments(){
 
    return (
       <div className="commentWrapper">
-         <h1>Comments</h1>
+         <h3>Comments</h3>
          <div className="comments">
-            {comments.map((comment, index)=>(<div className="comment" key={index}><h4 onClick={()=>{getCommentDetails(comment.postId)}}>{comment.name}</h4><h6>{comment.email}</h6><p>{comment.body}</p></div>))}
+            {comments.map((comment, index)=>(<div className="comment" key={index}><h5 onClick={()=>{getCommentDetails(comment.postId)}}>{comment.name}</h5><h6>{comment.email}</h6><p>{comment.body}</p></div>))}
          </div> 
       </div>
    )
