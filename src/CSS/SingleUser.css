@@ -1,0 +1,7 @@
+.userWrapper{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: auto;
+   text-align: center;
+   padding: 10px 5px;
+}

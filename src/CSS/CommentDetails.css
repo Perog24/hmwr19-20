@@ -1,0 +1,7 @@
+.commentWrapper{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: hidden;
+   padding: 10px 5px;
+   text-align: left;
+}

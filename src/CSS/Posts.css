@@ -1,0 +1,16 @@
+.postsWrapper{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: auto;
+   text-align: center;
+   padding: 10px 5px;
+}
+.posts{
+   border: 2px solid black;
+   border-radius: 20px;
+}
+.post{
+   width: 90%;
+   margin: auto;
+ border-bottom: 1px dashed rgb(92, 83, 83);
+}

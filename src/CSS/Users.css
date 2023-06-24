@@ -1,0 +1,20 @@
+.usersWrapper{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: auto;
+   text-align: center;
+   padding: 10px 5px;
+}
+.user{
+   margin: auto;
+   padding: 0 10px;
+   cursor: pointer;
+   width:fit-content;
+   border-top: 1px solid transparent;
+   border-bottom: 1px solid transparent;
+   border-radius: 20px;
+   &:hover {
+      border-top: 1px solid black;
+      border-bottom: 1px solid black;
+   }
+}

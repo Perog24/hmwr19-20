@@ -1,0 +1,34 @@
+.commentWrapper{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: auto;
+   text-align: center;
+   padding: 10px 5px;
+}
+.comments{
+   margin: 10px auto;
+   padding: 5px;
+   width: 96%;   
+   border: transparent;
+   border-radius: 20px;
+}
+.comments *{
+   margin: 0;
+}
+.comment {
+   margin-bottom: 10px;
+   padding: 0 10px;
+   border-bottom: 2px solid rgb(0, 0, 0); 
+   border-top: 2px solid rgb(0, 0, 0); 
+   border-radius: 10px;  
+}
+.commentWrapper h1{
+  text-align: center;
+}
+.comments h4{
+   cursor: pointer;
+   &:hover{
+      color:#3b7d9c!important;
+      font-weight: bold;
+   }
+}

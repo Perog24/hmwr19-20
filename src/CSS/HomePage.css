@@ -1,0 +1,72 @@
+.home{
+   height: calc(100vh - 112px);
+   min-height:80px;
+   overflow: hidden;
+   text-align: center;
+   padding: 10px 5px;
+}
+.home h3 {
+    font-size: 2.5rem !important;
+    color:rgb(65, 60, 60);
+}
+.figure{
+   position: relative;
+   width: 50%;
+   margin: auto!important ;
+   height: 75%;
+  
+}
+.circle{
+   width: 40px;
+   height: 200px;
+   border: 2px solid black;
+   border-left: none;
+   position: absolute;
+   border-radius: 50%;
+   top: 20%;
+   left: 45%;
+}
+.circle-1{ 
+   animation: rotateClock 9s linear infinite;  
+}
+.circle-2{ 
+   animation: rotateClock2 9s linear infinite;
+ }
+ .circle-3{  
+   animation: rotateClock3 9s linear infinite;
+ }
+ .circle-4{  
+   animation: rotateClock4 9s linear infinite;
+ }
+@keyframes rotateClock {
+   from {
+     transform: rotate(0deg);
+   }
+   to {
+     transform: rotate(360deg);
+   }
+ }
+ @keyframes rotateClock2 {
+   from {
+     transform: rotate(90deg);
+   }
+   to {
+     transform: rotate(450deg);
+   }
+ }
+ @keyframes rotateClock3 {
+   from {
+     transform: rotate(45deg);
+   }
+   to {
+     transform: rotate(405deg);
+   }
+ }
+ @keyframes rotateClock4 {
+   from {
+     transform: rotate(-45deg);
+   }
+   to {
+     transform: rotate(315deg);
+   }
+ }
