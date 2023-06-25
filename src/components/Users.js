@@ -21,7 +21,7 @@ export default function Users() {
    }, [isDataLoaded]);
 
    function findUser(index){
-      fetch(`https://jsonplaceholder.typicode.com/users/${index}/posts`)
+      fetch(`https://jsonplaceholder.typicode.com/posts?userId=${index}`)
       .then((response) => response.json())
         .then((data) =>{
          navigate(`/users/user-details`, {state: {data}})

@@ -6,7 +6,8 @@ import '../CSS/SingleUser.css';
 export default function SingleUser() {
   
    const user = JSON.parse(localStorage.getItem('myuser'));
-   const data = useLocation().state?.data 
+   const data = useLocation().state?.data ;
+   console.log(data);
    if (!user ) {
       return <div>Loading...</div>;
    }
